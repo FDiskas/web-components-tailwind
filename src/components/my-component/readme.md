@@ -1,6 +1,6 @@
 # my-component
 
-
+<my-component first="Stencil" middle="'Don't call me a framework'" last="JS" class="hydrated"></my-component>
 
 <!-- Auto Generated Below -->
 
