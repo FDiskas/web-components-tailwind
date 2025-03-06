@@ -32,12 +32,18 @@ export const config: Config = {
     },
     {
       type: 'docs-readme',
+      footer: '*Built with love! ❤️*',
     },
-    // For dev server
+    // For vscode intellisense
+    {
+      type: 'docs-vscode',
+      file: './.vscode/custom-elements.json',
+    },
+    // Demo page
     {
       type: 'www',
       serviceWorker: null, // disable service workers
-      empty: true,
+      empty: false,
     },
   ],
   plugins: [inlineSvg(), tailwind(), tailwindHMR()],

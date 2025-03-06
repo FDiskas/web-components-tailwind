@@ -29,12 +29,12 @@ export class MyComponent {
 
   render() {
     return (
-      <div class="grid -mt-16 place-items-center text-white font-bold font-mono bg-green-600 glass rounded-md shadow-md">
+      <div class="grid place-items-center text-white font-bold font-mono bg-green-600 glass rounded-md shadow-md">
         <div class="w-full max-w-6xl gap-4 mb-8 lg:rounded-md bg-opacity-60 ">
-          <div class="flex flex-col px-2 pt-2">
+          <div class="flex gap-5">
             <div class="flex flex-col">
               <span class="p-4 text-2xl font-semibold uppercase">Card demo</span>
-              <div class='size-40 -mb-40' innerHTML={Lambo} />
+              <div class='size-40' innerHTML={Lambo} />
             </div>
             <div class="grid grid-cols-1 mx-4 md:grid-cols-2 place-items-center">{this.getText()} </div>
           </div>

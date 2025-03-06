@@ -1,6 +1,8 @@
 # my-component
 
+```jsx
 <my-component first="Stencil" middle="'Don't call me a framework'" last="JS" class="hydrated"></my-component>
+```
 
 <!-- Auto Generated Below -->
 
@@ -16,4 +18,4 @@
 
 ----------------------------------------------
 
-*Built with [StencilJS](https://stenciljs.com/)*
+*Built with love! ❤️*

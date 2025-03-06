@@ -8,10 +8,17 @@
 
   <script type="module" src="/build/mediq-ui.esm.js"></script>
   <script nomodule src="/build/mediq-ui.js"></script>
+  <script type="module" src="https://jspm.dev/api-viewer-element"></script>
 </head>
 
 <body>
-  <my-component first="Stencil" middle="'Don't call me a framework'" last="JS"></my-component>
+  <!-- This is Demo of our all components -->
+  <api-viewer src="/custom-elements.json" section="demo" selected="my-component"></api-viewer>
+  <style>
+    api-viewer {
+      max-width: 100%;
+    }
+  </style>
 </body>
 
 </html>

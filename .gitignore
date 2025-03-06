@@ -13,6 +13,7 @@ log.txt
 
 .stencil/
 .idea/
+.vscode/custom-elements.json
 .sass-cache/
 .versions/
 node_modules/
