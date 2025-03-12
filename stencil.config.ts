@@ -5,6 +5,7 @@ import tailwindConf from './tailwind.config';
 
 import tailwind, { tailwindHMR, setPluginConfigurationDefaults } from 'stencil-tailwind-plugin';
 import { inlineSvg } from 'stencil-inline-svg';
+import { reactOutputTarget } from '@stencil/react-output-target';
 
 setPluginConfigurationDefaults({
   tailwindConf,
@@ -19,9 +20,15 @@ setPluginConfigurationDefaults({
 export const config: Config = {
   namespace: 'mediq-ui',
   buildEs5: 'prod',
+  minifyJs: true,
+  minifyCss: true,
   srcDir: 'src',
   validatePrimaryPackageOutputTarget: true,
   outputTargets: [
+    {
+      type: 'dist',
+      esmLoaderPath: '../loader',
+    },
     {
       type: 'dist-custom-elements',
       customElementsExportBehavior: 'auto-define-custom-elements',

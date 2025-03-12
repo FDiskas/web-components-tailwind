@@ -2,6 +2,11 @@ import { format } from '@/utils/utils';
 import { Component, Prop, h } from '@stencil/core';
 import Lambo from './svg/gallardo.svg';
 
+/**
+ * This is a simple component that demonstrates how to use Stencil with Tailwind CSS.
+ * @slot - In case we use slot
+ * @cssprop {Background} [--tw-bg-opacity=0.2] - Something that can be passed as a CSS style
+ */
 @Component({
   tag: 'my-component',
   styleUrl: 'my-component.css',
@@ -11,17 +16,17 @@ export class MyComponent {
   /**
    * The first name
    */
-  @Prop() first: string;
+  @Prop({ reflect: true }) first: string = 'My First Name';
 
   /**
    * The middle name
    */
-  @Prop() middle: string;
+  @Prop({ reflect: true }) middle: string = 'My Middle Name';
 
   /**
    * The last name
    */
-  @Prop() last: string;
+  @Prop({ reflect: false }) last: string = 'My Last Name';
 
   private getText(): string {
     return format(this.first, this.middle, this.last);
@@ -36,7 +41,8 @@ export class MyComponent {
               <span class="p-4 text-2xl font-semibold uppercase">Card demo</span>
               <div class='size-40' innerHTML={Lambo} />
             </div>
-            <div class="grid grid-cols-1 mx-4 md:grid-cols-2 place-items-center">{this.getText()} </div>
+            <div class="grid grid-cols-1 mx-4 md:grid-cols-2 place-items-center">{this.getText()}</div>
+
           </div>
         </div>
       </div>

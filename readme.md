@@ -106,4 +106,22 @@ function App() {
 export default App;
 ```
 
+Typescript typings for react
+
+```tsx
+import { JSX as stencils, defineCustomElements } from 'foobar-design-system/loader';
+
+defineCustomElements(window);
+
+declare module 'react' {
+  namespace JSX {
+    interface IntrinsicElements extends stencils.IntrinsicElements {}
+  }
+}
+
+createRoot(document.getElementById('root')!).render(<my-component first="asas" />);
+```
+
+Use https://publint.dev/trustauthx@1.0.37
+
 Check out this [Live Demo](https://stackblitz.com/edit/vitejs-vite-b6zuds?file=src%2FApp.tsx).

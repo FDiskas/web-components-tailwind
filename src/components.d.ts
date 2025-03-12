@@ -6,8 +6,10 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface DemoFoo {
-    }
+    /**
+     * This is a simple component that demonstrates how to use Stencil with Tailwind CSS.
+     * @cssprop {Background} [--tw-bg-opacity=0.2] - Something that can be passed as a CSS style
+     */
     interface MyComponent {
         /**
           * The first name
@@ -24,12 +26,10 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLDemoFooElement extends Components.DemoFoo, HTMLStencilElement {
-    }
-    var HTMLDemoFooElement: {
-        prototype: HTMLDemoFooElement;
-        new (): HTMLDemoFooElement;
-    };
+    /**
+     * This is a simple component that demonstrates how to use Stencil with Tailwind CSS.
+     * @cssprop {Background} [--tw-bg-opacity=0.2] - Something that can be passed as a CSS style
+     */
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -37,13 +37,14 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
-        "demo-foo": HTMLDemoFooElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
-    interface DemoFoo {
-    }
+    /**
+     * This is a simple component that demonstrates how to use Stencil with Tailwind CSS.
+     * @cssprop {Background} [--tw-bg-opacity=0.2] - Something that can be passed as a CSS style
+     */
     interface MyComponent {
         /**
           * The first name
@@ -59,7 +60,6 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
-        "demo-foo": DemoFoo;
         "my-component": MyComponent;
     }
 }
@@ -67,7 +67,10 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "demo-foo": LocalJSX.DemoFoo & JSXBase.HTMLAttributes<HTMLDemoFooElement>;
+            /**
+             * This is a simple component that demonstrates how to use Stencil with Tailwind CSS.
+             * @cssprop {Background} [--tw-bg-opacity=0.2] - Something that can be passed as a CSS style
+             */
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
